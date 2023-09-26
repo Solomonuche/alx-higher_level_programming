@@ -1,9 +1,9 @@
 #!/usr/bin/python
 class Square:
     """
-    Create an empty class.
+    This class deines an empty class.
 
-    Attributes:
-        none.
+    No attribute or method is created at the moment.
+    It uses pass as a placeholder..
     """
     pass

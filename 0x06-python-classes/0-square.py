@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Create an empty string."""
 
+
 class Square:
     """
     This class deines an empty class.

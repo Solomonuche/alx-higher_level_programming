@@ -23,12 +23,12 @@ class Square:
              Return the area of the square.
         """
         return self.__size * self.__size
-    
+
     @property
     def size(self):
         """
         Size getter method.
-        
+
         Return:
             Size of the square.
         """

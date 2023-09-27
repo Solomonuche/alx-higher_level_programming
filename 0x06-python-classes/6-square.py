@@ -75,10 +75,11 @@ class Square:
         A public instance method that prints in stdout
         the square with the character.
         """
-        for _ in range(self.__position[1]):
-            print()
         if self.__size > 0:
-            for _ in range(self.__size):
-                print(" " * self.__position[0] + "#" * self.__size)
+            for y in range(self.__position[1]):
+                print()
+            for x in range(self.__size):
+                print(' ' * self.__position[0], end='')
+                print('#' * self.__size)
         else:
             print()

@@ -63,8 +63,8 @@ class Square:
         A method that sets the private instance of the class and
         validate position.
         """
-        if type(value) is tuple and len(value) is 2 and \
-                type(value[0]) is int and type(value[1]) is int and \
+        if isinstance(value, tuple) and len(value) == 2 and \
+                isinstance(value[0], int) and isinstance(value[1], int) and \
                 value[0] >= 0 and value[1] >= 0:
             self.__position = value
         else:
@@ -75,12 +75,10 @@ class Square:
         A public instance method that prints in stdout
         the square with the character.
         """
-
-        if self.__size == 0:
-            print("")
+        for _ in range(self.__position[1]):
+            print()
+        if self.__size > 0:
+            for _ in range(self.__size):
+                print(" " * self.__position[0] + "#" * self.__size)
         else:
-            for y in range(self.__position[1]):
-                print()
-            for x in range(self.__size):
-                print(' ' * self.__position[0], end='')
-                print('#' * self.__size)
+            print()

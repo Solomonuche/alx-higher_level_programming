@@ -98,4 +98,4 @@ class Square:
         else:
             result += "\n"
 
-        return result
+        return result.strip()

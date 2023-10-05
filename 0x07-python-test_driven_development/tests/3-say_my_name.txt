@@ -1,0 +1,51 @@
+Say my name module Doctest
+===========================
+Function prototype - def say_my_name(first_name, last_name=""):
+---------------------------------------------------------------
+
+Check that import module was successful
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Check normal operation
+	>>> first_name = "Python"
+        >>> last_name = "fun"
+	>>> say_my_name(first_name, last_name)
+	My name is Python fun
+
+	>>> first_name = "Python"
+	>>> say_my_name(first_name, last_name="")
+        My name is Python 
+
+Check that firstname or lastname is a string
+	>>> first_name = 23
+	>>> say_my_name(first_name, last_name="")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+	
+        >>> say_my_name(2, last_name="")
+        Traceback (most recent call last):
+                ...
+        TypeError: first_name must be a string
+
+	>>> first_name = "Python"
+        >>> last_name = 24
+        >>> say_my_name(first_name, last_name)
+        Traceback (most recent call last):
+                ...
+        TypeError: last_name must be a string
+
+Check that more 2 argumet is ot passed to the function
+	>>> first_name = "Python"
+	>>> last_name = "fun"
+	>>> nickname = "easy"
+	>>> say_my_name(first_name, last_name, nickname)
+	Traceback (most recent call last):
+                ...
+        TypeError: say_my_name() expects 1 or 2 positional arguments, but ... were given
+
+Check when function is called without an argument
+	>>> say_my_name()
+        Traceback (most recent call last):
+                ...
+        TypeError: say_my_name() missing 1 required positional argument	

@@ -1,0 +1,27 @@
+Text indentation module
+========================
+Function prototype def text_indentation(text):
+----------------------------------------------
+
+Checking for module import success
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Check for normal operation
+	>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+	Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+	Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: igitur""") # doctest: +NORMALIZE_WHITESPACE
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+	
+	Quonam modo?$
+	
+	Utrum igitur tibi litteram videor an totas paginas commovere?$
+	
+	Non autem hoc:$
+	
+	igitur
+
+Checking that text is a string
+	>>> text_indentation(12)
+	Traceback (most recent call last)
+		...
+	TypeError: text must be a string

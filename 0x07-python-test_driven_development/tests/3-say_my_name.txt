@@ -44,8 +44,14 @@ Check that more 2 argumet is ot passed to the function
                 ...
         TypeError: say_my_name() expects 1 or 2 positional arguments, but ... were given
 
-Check when function is called without an argument
-	>>> say_my_name()
-        Traceback (most recent call last):
-                ...
-        TypeError: say_my_name() missing 1 required positional argument	
+Checking for instance of None as first name:
+	 >>> say_my_name()
+	 Traceback (most recent call last):
+         ...
+         TypeError: first_name must be a string
+
+Checking for imstance of None as last name:
+	 >>> say_my_name("Hello", None)
+	 Traceback (most recent call last):
+         ...
+         TypeError: last_name must be a string

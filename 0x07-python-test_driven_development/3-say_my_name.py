@@ -14,10 +14,6 @@ def say_my_name(first_name=None, last_name="", *args):
         raise TypeError("say_my_name() expects 1 or 2 positional "
                         "arguments, but ... were given")
 
-    """ Check that at least one argument is passed"""
-    if first_name is None:
-        raise TypeError("say_my_name() missing 1 required positional argument")
-
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
     if not isinstance(last_name, str):

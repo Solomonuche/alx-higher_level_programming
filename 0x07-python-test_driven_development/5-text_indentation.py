@@ -13,6 +13,8 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
+    text = text.strip()
+
     _list = []
     for i in text:
         if i in ('.', '?', ':'):

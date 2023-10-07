@@ -10,4 +10,13 @@ def text_indentation(text):
     2 new lines after each of these characters: ., ? and :
     """
 
-    pass
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    _list = []
+    for i in text:
+        if i in ('.', '?', ':'):
+            _list.extend([i, '\n' * 2])
+        else:
+            _list.append(i)
+    print(''.join(_list))

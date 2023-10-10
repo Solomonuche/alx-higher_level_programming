@@ -13,6 +13,7 @@ class Square(Rectangle):
     def __init__(self, size):
         """constructor mrthod"""
 
+        super().__init__(size, size)
         self.integer_validator("size", size)
         self.__size = size
 
@@ -21,7 +22,3 @@ class Square(Rectangle):
 
         return self.__size * self.__size
 
-    def __str__(self):
-        """Rectangle class string representation"""
-
-        return f"[Rectangle] {self.__size}/{self.__size}"

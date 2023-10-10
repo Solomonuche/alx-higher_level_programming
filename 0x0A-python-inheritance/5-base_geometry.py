@@ -5,7 +5,7 @@ Geometry module
 
 
 class BaseGeometry:
-    """ 
+    """
     Geometry class representation.
     """
 

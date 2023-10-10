@@ -1,0 +1,18 @@
+Geometry class module
+=====================
+
+Checking for module
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Validate public instance method def integer_validator(self, name, value)
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("name", "John")
+	Traceback (most recent call last):
+		...
+	TypeError: name must be an integer
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", 0)
+        Traceback (most recent call last):
+                ...
+        TypeError: age must be greater than 0

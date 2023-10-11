@@ -18,4 +18,4 @@ class Student:
         method that retrieves a dictionary
         """
 
-        return Student.__dict__
+        return self.__dict__

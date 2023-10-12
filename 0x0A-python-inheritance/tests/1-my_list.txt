@@ -17,3 +17,33 @@ Checking for normal operation
 	[1, 2, 3, 4, 5]
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+Checking for one negative number:
+	 >>> l = MyList()
+	 >>> l.append(-1)
+	 >>> l.append(5)
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
+	 >>> l.print_sorted()
+	 [-1, 1, 2, 3, 4, 5]
+	 >>> print(l)
+	 [4, 3, 2, 1, -1, 5]
+
+Checking for all negative numbers:
+	 >>> l = MyList()
+	 >>> l.append(-10)
+	 >>> l.append(-1)
+	 >>> l.append(-7)
+	 >>> l.append(-2)
+	 >>> l.append(-8)
+	 >>> print(l)
+	 [-10, -1, -7, -2, -8]
+	 >>> l.print_sorted()
+	 [-10, -8, -7, -2, -1]
+	 >>> print(l)
+         [-10, -1, -7, -2, -8]
+
+Checking for empty list:
+	 >>> l = MyList()
+	 >>> l.print_sorted()
+	 []

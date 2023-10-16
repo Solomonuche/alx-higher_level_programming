@@ -54,6 +54,8 @@ class Base:
         """ A static method that returns the list of the JSON
         string representation """
 
+        if json_string is None or len(json_string) == 0:
+            return "[]"
         return json.loads(json_string)
 
     @classmethod

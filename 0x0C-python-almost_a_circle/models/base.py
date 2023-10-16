@@ -41,7 +41,7 @@ class Base:
         filename = f'{type(list_objs[0]).__name__}.json'
         with open(filename, 'w', encoding='utf-8') as file:
             if list_objs is None:
-                file.write("[]")
+                file.write([])
             else:
                 mylist = []
                 for i in range(len(list_objs)):

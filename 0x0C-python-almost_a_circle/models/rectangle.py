@@ -63,7 +63,8 @@ class Rectangle(Base):
                     super().__init__(value)
 
     def to_dictionary(self):
-        """ A method that returns the dictionary representation of a Rectangle"""
+        """ A method that returns the dictionary representation
+        of a Rectangle"""
 
         return {
                 'id': self.id,
@@ -76,7 +77,8 @@ class Rectangle(Base):
     def __str__(self):
         """official string representation"""
 
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
 
     @property
     def width(self):

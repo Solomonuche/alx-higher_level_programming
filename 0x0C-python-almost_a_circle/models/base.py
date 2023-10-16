@@ -12,7 +12,7 @@ class Base:
 
     def __init__(self, id=None, *args):
         """ Class constructor"""
-        
+
         if len(args) != 0:
             raise TypeError("Base.__init__() takes from 1 to 2 positional "
                             "arguments but ... were given")
@@ -22,7 +22,7 @@ class Base:
             self.id = Base.__nb_objects
         else:
             self.id = id
-            
+
     @staticmethod
     def to_json_string(list_dictionaries):
         """ A static method that returns the JSON string representation
@@ -43,7 +43,7 @@ class Base:
             if list_objs is None:
                 file.write([])
             else:
-                mylist =  []
+                mylist = []
                 for i in range(len(list_objs)):
                     mylist.append(list_objs[i].to_dictionary())
 
@@ -55,3 +55,12 @@ class Base:
         string representation """
 
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """  A class method that returns an instance with all
+        attributes already set"""
+
+        dummy_rectangle = cls(1, 1)
+        dummy_rectangle.update(**dictionary)
+        return dummy_rectangle

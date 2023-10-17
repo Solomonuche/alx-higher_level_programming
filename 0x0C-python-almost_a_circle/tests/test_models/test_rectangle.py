@@ -122,7 +122,7 @@ class TestRectangle(unittest.TestCase):
 
         mock_stdout.truncate(0)
         mock_stdout.seek(0)
-        
+
         r1 = Rectangle(10, 10, 10, 10)
         r1.update(x=1, height=2, y=3, width=4, id=89)
         print(r1)

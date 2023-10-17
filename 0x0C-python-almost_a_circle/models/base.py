@@ -38,7 +38,7 @@ class Base:
         """ A class method that writes the JSON string representation
         of list_objs to a file"""
 
-        """filename = f'{type(list_objs[0]).__name__}.json'"""
+        filename = f'{type(list_objs[0]).__name__}.json'
         with open(filename, 'w', encoding='utf-8') as file:
             if list_objs is None:
                 file.write("[]")

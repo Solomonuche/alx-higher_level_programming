@@ -32,9 +32,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b4.id, 12)
         self.assertEqual(b5.id, 4)
 
+    def base_instance(x, y, z):
+        return Base(x, y, z)
+
     def test_Base_withMoreThan1Argument(self):
         """ Test for when more than one argument is passed"""
 
-        base_instance = lambda x, y, z: Base(x, y, z)
         """ Assert raises"""
-        self.assertRaises(TypeError, base_instance, 2, 3, 4)
+        self.assertRaises(TypeError, self.base_instance, 2, 3, 4)

@@ -62,6 +62,8 @@ class Base:
         """  A class method that returns an instance with all
         attributes already set"""
 
-        dummy_rectangle = cls(1, 1)
-        dummy_rectangle.update(**dictionary)
-        return dummy_rectangle
+        dummy = cls(1, 1)
+
+        if dummy:
+            dummy.update(**dictionary)
+            return dummy

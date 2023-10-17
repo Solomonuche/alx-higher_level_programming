@@ -38,8 +38,7 @@ class Base:
         """ A class method that writes the JSON string representation
         of list_objs to a file"""
 
-        filename = f'{type(list_objs[0]).__name__}.json'
-        with open(filename, 'w', encoding='utf-8') as file:
+        with open(cls.__name__+'.json', 'w', encoding='utf-8') as file:
             if list_objs is None:
                 file.write("[]")
             else:
@@ -47,7 +46,7 @@ class Base:
                 for i in range(len(list_objs)):
                     mylist.append(list_objs[i].to_dictionary())
 
-                jstring = cls.to_json_string(mylist)
+                jstring = Base.to_json_string(mylist)
                 file.write(jstring)
 
     def from_json_string(json_string):

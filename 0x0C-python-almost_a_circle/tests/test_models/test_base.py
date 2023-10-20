@@ -52,9 +52,9 @@ class TestBase(unittest.TestCase):
         dictionary = r1.to_dictionary()
         json_dictionary = Base.to_json_string([dictionary])
 
-        expected_output = '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]'
+        expected = '[{"x": 2, "width": 10, "id": 1, "height": 7, "y": 8}]'
         parsed_json = json.loads(json_dictionary)
-        expected_dict = json.loads(expected_output)
+        expected_dict = json.loads(expected)
 
         json_dictionary1 = Base.to_json_string([])
 

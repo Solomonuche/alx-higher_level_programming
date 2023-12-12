@@ -9,8 +9,9 @@
 const arg = process.argv[2];
 const str = 'C is fun';
 
-if (!isNaN(arg) && arg > 0) {
+if (!isNaN(arg)) {
   for (let i = 0; i < arg; i++) {
+    if (arg <= 0) break;
     console.log(str);
   }
 } else {

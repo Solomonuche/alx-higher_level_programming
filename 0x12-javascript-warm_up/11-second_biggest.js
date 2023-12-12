@@ -16,5 +16,5 @@ if (args.length > 3) {
   }
   console.log(secondLargest);
 } else {
-  console.log(1);
+  console.log(0);
 }

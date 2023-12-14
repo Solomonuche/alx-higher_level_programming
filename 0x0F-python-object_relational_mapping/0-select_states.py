@@ -16,5 +16,5 @@ for row in rows:
     print(row)
 
 """clean up"""
-connect.close()
 cur.close()
+connect.close()

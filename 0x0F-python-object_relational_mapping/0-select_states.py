@@ -11,7 +11,7 @@ import MySQLdb
 
 if __name__ == "__main__":
     connect = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
-                         passwd=argv[2], db=argv[3])
+                              passwd=argv[2], db=argv[3])
     cur = connect.cursor()
     cur.execute("SELECT id, name FROM states ORDER by states.id ASC")
     rows = cur.fetchall()

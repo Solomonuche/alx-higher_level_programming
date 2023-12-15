@@ -15,7 +15,8 @@ if __name__ == "__main__":
     connect = DB.connect(user=argv[1], passwd=argv[2], db=argv[3],
                          host="localhost", port=3306)
     cur = connect.cursor()
-    my_query = "SELECT id, name FROM states WHERE states.name = %s \
+    my_query = "SELECT id, name FROM states \
+                WHERE states.name LIKE BINARY %s \
                 ORDER by states.id ASC"
     cur.execute(my_query, (argv[4],))
     rows = cur.fetchall()

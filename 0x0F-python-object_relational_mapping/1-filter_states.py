@@ -1,21 +1,26 @@
 #!/usr/bin/python3
-import MySQLdb as DB
-
 """
-a script that lists all states from the database hbtn_0e_0_usa
+a script that lists all states with a name starting with N (upper N) from the
+database hbtn_0e_0_usa
 You must use the module MySQLdb (import MySQLdb)
 Your script should connect to a MySQL server running on localhost at port 3306
 """
 
-connect = DB.connect(user="root", passwd="", db="hbtn_0e_0_usa")
-cur = connect.cursor()
-cur.execute("SELECT id, name FROM states WHERE states.name LIKE 'N%' \
-        ORDER by states.id ASC")
-rows = cur.fetchall()
 
-for row in rows:
-    print(row)
+import MySQLdb as DB
+from sys import argv
 
-"""clean up"""
-cur.close()
-connect.close()
+if __name__ == "__main__":
+    connect = DB.connect(user=argv[1], passwd=argv[2], db=argv[3],
+                         host="localhost", port=3306)
+    cur = connect.cursor()
+    cur.execute("SELECT id, name FROM states WHERE states.name LIKE 'N%' \
+                ORDER by states.id ASC")
+    rows = cur.fetchall()
+
+    for row in rows:
+        print(row)
+
+    """clean up"""
+    cur.close()
+    connect.close()

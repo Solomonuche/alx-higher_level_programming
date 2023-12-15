@@ -16,7 +16,7 @@ if __name__ == "__main__":
                          host="localhost", port=3306)
     cur = connect.cursor()
     my_query = "SELECT id, name FROM states \
-                WHERE states.name LIKE BINARY %s \
+                WHERE states.name LIKE %s \
                 ORDER by states.id ASC"
     cur.execute(my_query, (argv[4],))
     rows = cur.fetchall()

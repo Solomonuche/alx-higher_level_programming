@@ -24,4 +24,4 @@ if __name__ == "__main__":
         order_by(City.id)
 
     for row in obj:
-        print(f'{row.state.name}: {row.id} {row.name}')
+        print(f'{row.state.name}: ({row.id}) {row.name}')

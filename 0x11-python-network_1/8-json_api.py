@@ -15,12 +15,13 @@ if __name__ == "__main__":
 
     json_data = r.json()
 
-    if json_data:
-        user_id = json_data.get('id')
-        user_name = json_data.get('name')
+    try:
+        if json_data:
+            user_id = json_data.get('id')
+            user_name = json_data.get('name')
 
-        print(f'[{user_id}] {user_name}')
-    elif not json_data:
-        print('No result')
-    else:
+            print(f'[{user_id}] {user_name}')
+        else:
+            print('No result')
+    except:
         print('Not a valid JSON')

@@ -13,9 +13,8 @@ if __name__ == "__main__":
     # Make request
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
 
-    json_data = r.json()
-
     try:
+        json_data = r.json()
         if json_data:
             user_id = json_data.get('id')
             user_name = json_data.get('name')

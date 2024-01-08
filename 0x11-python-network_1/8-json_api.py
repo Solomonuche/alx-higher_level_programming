@@ -22,5 +22,5 @@ if __name__ == "__main__":
             print(f'[{user_id}] {user_name}')
         else:
             print('No result')
-    except:
+    except ValueError:
         print('Not a valid JSON')
